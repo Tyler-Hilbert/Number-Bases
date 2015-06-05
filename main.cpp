@@ -12,12 +12,21 @@
 
 using namespace std;
 
+
 string convert(const string &inNum, int inBase, int outBase);
 
+
 int main(int argc, const char** argv) {
-  string inNum = "420"; // The number entered
-  int inBase = 10; // The base of the number entered
-  int outBase = 16; // The base being converted to
+  string inNum; // The number entered
+  int inBase; // The base of the number entered
+  int outBase; // The base being converted to
+
+  cout << "Enter number:";
+  cin >> inNum;
+  cout << "Enter number base:";
+  cin >> inBase;
+  cout << "Enter base to convert to:";
+  cin >> outBase;
 
   cout << convert(inNum, inBase, outBase);
   cout << "\n";
@@ -25,6 +34,9 @@ int main(int argc, const char** argv) {
   return 0;
 }
 
+/**
+   Converts the inNum from the inBase to the outBase
+*/
 string convert(const string &inNum, int inBase, int outBase) {
   string outNum = "";
   int base10Num = 0;
